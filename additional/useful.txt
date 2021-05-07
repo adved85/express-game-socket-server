@@ -1,0 +1,15 @@
+How To Set Up a Node.js Application for Production on Ubuntu 16.04
+https://www.digitalocean.com/community/tutorials/how-to-set-up-a-node-js-application-for-production-on-ubuntu-16-04
+
+Manage Application with PM2
+provide and manage Node App as a System service.
+
+video 8 min:
+https://www.youtube.com/watch?v=Jsmeh7q9Qv4
+
+PM2 Dcoumentation
+http://pm2.keymetrics.io/docs/usage/quick-start/
+
+listen on port: 55263 -> 8443
+url: http://194.135.81.127:8443/ || https://omegacoding.com:8443/
+

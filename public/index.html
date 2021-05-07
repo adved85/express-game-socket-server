@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>chatrooms</title>
+	<link rel="shortcut icon" type="image/png" href="./favicon.png">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
+	<style>
+        .room-wrap {
+            float: left;
+            min-width: 200px;            
+        }
+        .log-n-convs {
+            float: left;
+        }
+        .search-btn {
+            min-width: 308px;
+            margin: 0 auto;
+            min-height: 24px;
+            background-color: chartreuse;
+            font-weight: 800;            
+        }
+        
+        .join-btn {
+            min-width: 100px;
+            min-height: 24px;
+            background-color: silver;
+        }
+    </style>
+</head>
+<body>
+ 
+<div class="io">
+    <div class="room-wrap left">
+        <fieldset>
+            <legend>OPEN ROOMS</legend>        
+            <div class="rooms"></div>
+        </fieldset>
+    </div>
+    <div class="log-n-convs">
+        <div class="login">
+            <form action="" onsubmit="return false">
+                <fieldset>                
+                <legend>Login nad Game-ID</legend>
+                <input type="text" name="username" placeholder="username">
+                <input type="text" name="gameid" placeholder="game-id">
+                <input type="submit" name="sendname" value="sendname">
+                </fieldset>
+            </form>
+        </div>
+        <div class="conversation">
+            <form action="" onsubmit="return false">
+                <fieldset>
+                <legend>Conversations</legend>
+                <input type="text" name="msg" placeholder="message">
+                <input type="submit" name="sendmsg" value="sendmessage">
+                </fieldset>
+            </form>
+        </div>
+        <div class="search">
+            <button class="search-btn">search</button>
+            <button class="join-btn">join</button>
+            <button class="disconnector">disconnector</button>
+        </div>
+    </div>
+
+</div>
+	<script type="text/javascript" src="./front.js"></script>
+	<script type="text/javascript" src=""></script>
+</body>
+</html>

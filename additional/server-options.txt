@@ -1,0 +1,74 @@
+/* create server with ssl
+help links:
+http://masashi-k.blogspot.com/2012/08/nodejs-express-30-https.html
+https://github.com/socketio/socket.io/issues/1011
+
+uunderstand: node.js + express 3.0 + https + socket.io
+ https://medium.com/@nileshsingh/everything-about-creating-an-https-server-using-node-js-2fc5c48a8d4e
+
+ 
+ proxy:
+ https://www.digitalocean.com/community/tutorials/how-to-use-apache-http-server-as-reverse-proxy-using-mod_proxy-extension
+*/
+
+
+// fs and https are built in modules //
+// const fs =  require('fs');
+// const https = require("https");
+
+// const options = {
+// 	key: fs.readFileSync('/opt/new/www_omegacoding_com.key'),
+// 	cert: fs.readFileSync('/opt/crt/certificate.crt'),
+// 	ca: [fs.readFileSync('/opt/crt/ca.crt')]
+//   };
+
+// const express = require("express");
+// const app = express();
+
+// var server = https.createServer(options, app).listen(55263, function(){
+// 	console.log("HTTPS-- Express server listening on port " + 55263);	 
+// });
+
+// // create simple http-server and redirect ro https //
+// var forceSsl = require('express-force-ssl');
+// var http = require('http');
+// http.createServer(app).listen(55264,function() {
+//     console.log("HTTP -- Express server listening on port 55264, and ready to redirect to HTTPS");
+// });
+// app.use(forceSsl);
+
+// -------------- create server ----------------
+// const server = https.createServer(options,
+//     app.use(
+//         function (req, res, next) {
+//             if (req.secure) {
+//                 // res.end('secure!')
+//                 return next();
+//             }else {         
+//                 res.redirect("https://omegacoding.com:8000");
+//                 // res.redirect("https://" + req.headers.host.replace(4000,8000) + req.url);
+//             }     
+            
+//         }
+//     )
+// ).listen(8000);
+
+// Redirect from http port 80 to https
+// var http = require('http');
+// http.createServer(function (req, res) { 
+//         //res.writeHead(301, { "Location": "https://" + req.headers['host'].replace(4000,8000) + req.url });
+//         res.writeHead(301, { "Location": "https://omegacoding.com:8000"});
+//         console.log("http request, will go to >> ");
+//         console.log("https://" + req.headers['host'].replace(4000,8000) + req.url );        
+//         res.end();
+// }).listen(4000);
+
+
+
+// --> code for http://mysite.com
+// var express = require('express');
+// var app = express();
+// var server = app.listen(55263, function(){
+// 	console.log("express listen port: 55263");	
+// });
+// -->
